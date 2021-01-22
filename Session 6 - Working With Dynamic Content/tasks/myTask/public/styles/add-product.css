@@ -1,0 +1,52 @@
+.product__form{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    padding: 1rem;
+    border-radius: 12pt;    
+    box-shadow: 1px 1px 3px 1px rgba(0,0,0,0.15);
+    background: var( --iceWhite );
+    color: var( --CeladonBlue );
+    max-width: 512px;
+}
+
+.product__form__body *{
+    margin-top: 1rem;
+}
+
+.product__form__body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;    
+    align-content: center;
+    margin: 1rem 3rem;      
+}
+
+.product__form__body input{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 16pt;
+    font-weight: bold;
+    background: var( --iceWhite );
+    border-radius: 4pt;
+    border: 1px solid var( --CeladonBlue );
+    padding: 0.25rem;
+}
+
+.product__form__body input:active,
+.product__form__body input:focus{
+    border: 1px solid var( --DarkJungleGreen );     
+}
+
+.product__form__body button{
+    cursor: pointer;
+    padding: 0.5rem;
+    font-size: 16pt;    
+    background-color: var( --CeladonBlue );
+    color: var( --EletricBlue );
+    border: none;
+}
+
+.product__form__body button:hover{
+    background-color: var( --EletricBlue );
+    color: var( --CeladonBlue );
+}

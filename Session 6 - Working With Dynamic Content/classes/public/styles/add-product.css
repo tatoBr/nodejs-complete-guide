@@ -1,0 +1,58 @@
+.new_product__form{       
+    box-shadow: 1pt 1pt 4pt 0pt rgba(0,0,0, 0.3);
+    border-radius: 4pt;
+    font-size: 0.8em;  
+    font-weight: lighter;
+    background-color: var( --light );
+    color: var( --darktext );  
+}
+.new_product__form__list{
+    display: flex;
+    justify-items: center;
+    flex-direction: column;  
+    padding: 2rem;
+    list-style: none;    
+}
+
+.new_product__form__list li{
+    padding-top: 0.5rem;   
+    display: flex;
+    justify-content: space-between;
+}
+
+.new_product__form__list li.product_description{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-items: stretch;
+    justify-content: stretch;
+}
+
+.new_product__form__list input,
+.new_product__form__list textarea{    
+    padding: 0.3rem;
+    border-radius: 4pt;
+    background: var( --midtone );
+    border: #e2e2e2 solid 1pt;      
+}
+
+.new_product__form__list input::-webkit-outer-spin-button,
+.new_product__form__list input::-webkit-inner-spin-button{
+    -webkit-appearance: none;
+}
+
+.new_product__form__list button{
+    cursor: pointer;
+    width: 100%;
+    padding: 0.3rem;
+    border-radius: 4pt;
+    border: var( --dark ) solid 1pt;
+    font-weight: bolder;
+    text-transform: uppercase;
+    color: var( --darktext );
+    background: none;
+}
+.new_product__form__list button:hover{
+    background-color: var( --midtone );
+}
+

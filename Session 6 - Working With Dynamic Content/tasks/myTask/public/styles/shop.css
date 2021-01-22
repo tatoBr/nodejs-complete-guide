@@ -1,0 +1,74 @@
+.grid{    
+    display: flex;
+    flex-wrap: wrap;    
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: auto;    
+}
+.card{
+    display: flex;
+    flex-direction: column;    
+    width: 25%;
+    margin: 0.7rem;      
+    box-shadow: 1px 1px 3px 1px rgba(0,0,0,0.15);
+    background: var( --iceWhite );
+    color: var( --CeladonBlue );   
+}
+
+.card__header{    
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 12pt;
+    font-weight: 100;
+    margin: 0.5rem;
+    max-width: 100%;
+}
+
+.card__header h1{
+    white-space: nowrap;    
+    overflow: hidden;
+}
+
+.card__body{
+    display: flex;    
+    flex-direction: column;    
+    width: 100%;
+}
+.card__body span,
+.card__body p,
+.card__body button{
+    margin: 0.5rem;
+}
+
+.card__body span{
+    font-weight: bolder;
+    font-size: 20pt;
+    color: var( --DarkJungleGreen );
+}
+
+.card__body p{
+    font-weight: lighter;
+    font-size: 12pt;
+    color: var( --CeladonBlue );
+}
+
+.card__body button {
+    cursor: pointer;
+    padding: 0.5rem;
+    margin: 1rem;
+    font-size: 16pt;    
+    background-color: var( --CeladonBlue );
+    color: var( --EletricBlue );
+    border: none;
+}
+
+.card__body button:hover{
+    background-color: var( --EletricBlue );
+    color: var( --CeladonBlue );
+}
+
+
+
+.card__photo{
+    max-width: 100%;
+    max-height: 100%;
+}

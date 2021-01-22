@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ pageTitle }}</title>    
+    <link rel="stylesheet" href="/styles/main.css">
+    {{#if productsPage}}<link rel="stylesheet" href="/styles/product_card.css">{{/if}}
+    {{#if addProductPage}}<link rel="stylesheet" href="/styles/add-product.css">{{/if}}
+</head>
+<body>
+    <header>
+        <nav class="header__nav">
+            <ul class="header__nav__list">
+                <li class="header__nav__listitem"><a href="/" {{#if homePage}}class="active"{{/if}}>home</a></li>
+                <li class="header__nav__listitem"><a href="/products" {{#if productsPage}}class='active'{{/if}}>products</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        {{{ body }}}
+    </main>
+</body>
+</html>

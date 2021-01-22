@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NodeJS Complete Guide - Session 6-HOME</title>
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="/styles/product_card.css">
+</head>
+<body>
+    <header>
+        <nav class="header__nav">
+            <ul class="header__nav__list">
+                <li class="header__nav__listitem"><a href="/">home</a></li>
+                <li class="header__nav__listitem"><a class="active" href="/products">products</a></li>                        
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>LIST OF ALL PRODUCTS</h1>
+        <div class="grid">
+            <article class="card">
+                <h1 class="card__title">Product Tittle</h1>
+                <img class="card__photo" src="/media/How-to-format-a-book.jpg" alt="Product Photo" >
+                <span class="card__price">$9,99</span>
+                <p class="card__description">Some dummy product description</p>
+                <button class="card__action">add to cart</button>
+            </article>
+            <article class="card">
+                <h1 class="card__title">Product Tittle</h1>
+                <img class="card__photo" src="/media/How-to-format-a-book.jpg" alt="Product Photo" >
+                <span class="card__price">$9,99</span>
+                <p class="card__description">Some dummy product description</p>
+                <button class="card__action">add to cart</button>
+            </article>           
+        </div>
+        <a class="plus" href="/add-product">+</a>              
+    </main>
+</body>
+</html>

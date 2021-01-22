@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta( charset="UTF-8" )
+        meta( name="viewport", content="width=device-width, initial-scale=1.0" )
+        title #{ pageTitle }
+        link( rel="stylesheet", href="/styles/main.css" )
+        block styles
+    body
+        header
+            nav.header__nav
+                ul.header__nav__list
+                    li.header__nav__listitem
+                        a( href="/", class=(( path === "/") ? "active" : "" )) HOME
+                    li.header__nav__listitem
+                        a(href="/products", class=(( path === "/products" )? "active" : "" )) PRODUCTS
+        main
+            block content

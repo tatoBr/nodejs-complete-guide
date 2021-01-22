@@ -1,0 +1,16 @@
+{
+  "name": "seesion-3",
+  "version": "1.0.0",
+  "description": "udemy nodejs couser, session 3 - Understanding the basics.",
+  "main": "app.js",
+  "dependencies": { },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  },
+  "scripts": {
+    "start": "nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Renato Lima Santos",
+  "license": "ISC"
+}

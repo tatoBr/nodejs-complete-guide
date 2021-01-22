@@ -1,0 +1,20 @@
+extends layouts/main-layout.pug
+block styles
+    link( rel="stylesheet" href="/styles/main.css" )
+    link( rel="stylesheet" href="/styles/add-product.css" )
+
+block content
+    h1 Add a new Product:
+        form.new_product__form(action="/add-product" method="POST")
+            ul.new_product__form__list
+                li
+                    label(for="Name") Name:
+                    input(type="text" name="name")#Name
+                li
+                    label(for="Price") Price:
+                    input(type="number" step=".01" name="price")#Price
+                li.product_description
+                    label(for="Description") Description:
+                    textarea( name="description" cols="40" rows="8" )#Description                        
+                li
+                    button( type="submit" ) Add

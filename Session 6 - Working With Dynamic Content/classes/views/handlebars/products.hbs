@@ -1,0 +1,17 @@
+<h1>LIST OF ALL PRODUCTS</h1>
+<div class="grid">
+    {{#if hasProducts }}
+    {{#each products}}
+    <article class="card">
+        <h1 class="card__title">{{ this.name }}</h1>
+        <img class="card__photo" src="media/placeholder.jpg" alt="Product Photo">
+        <span class="card__price">{{ this.price }}</span>
+        <p class="card__description">{{ this.description }}</p>
+        <button class="card__action">add to cart</button>
+    </article>
+    {{/each }}
+    {{ else }}
+    <span> No Product Found!</span>
+    {{/if}}
+</div>
+<a class="plus" href="/add-product">+</a>

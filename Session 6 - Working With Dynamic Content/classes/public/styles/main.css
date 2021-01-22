@@ -1,0 +1,106 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/*Color Pallet*/
+:root{
+    --dark: #626262;
+    --darktext: #22566B; 
+    --light: #FFFFFF;
+    --midtone: #F5F5F5;
+    
+    --retro_red: #BF1534;
+    --retro_lightbrown: #D99066;
+    --retro_grey: #D9D5D2;
+    --retro_brown: #A6654E;
+    --retro_darkbrown: #59382C;
+
+    --skyfall_darkerred: #260407;
+    --skyfall_red: #D91A2A;
+    --skyfall_darkred: #8C111B;
+    --skyfall_lightred: #D9414E;
+    --skyfall_brown: #590B0B;
+    --skyfall_gray: #d4c3c3; 
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    font-family: sans-serif;
+    background: var( --light );
+    color: var( --darktext );
+}
+
+.header__nav{
+    width: 100%;
+    height: 1.5rem;
+    background: var( --dark );    
+}
+
+.header__nav__list{
+    width: 100%;
+    height: 100%;    
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+
+.header__nav__listitem{
+    height: 100%;    
+}
+
+.header__nav__listitem a{    
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+    height: inherit;
+    width: inherit;
+    padding: 0 2rem;   
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 12pt;
+    color: var( --light );    
+}
+
+.header__nav__listitem a:hover,
+.header__nav__listitem a:active,
+.header__nav__listitem a.active{    
+    background: var( --darktext );
+    color: #ffdf75; 
+    transition: 300ms;      
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    padding: 3rem;
+    margin: 1rem;
+
+    background-color: var( --midtone );    
+    border-radius: 4pt;
+    box-shadow: 1pt 1pt 4pt 0pt rgba(0,0,0, 0.3);
+    text-align: center;    
+}
+
+.plus{
+    text-decoration: none;
+    font-size: xx-large;
+    font-weight: bolder;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 2rem;
+    width: 2rem;
+    margin-bottom: 1rem;
+    
+    border: var( --darktext ) solid 1.5pt;
+    color: var( --darktext );
+    border-radius: 100%;    
+}

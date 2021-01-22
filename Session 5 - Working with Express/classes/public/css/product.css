@@ -1,0 +1,42 @@
+.product-form{
+    padding: 1rem;
+    border-radius: 3pt; 
+    width: 90%;
+    margin: auto;           
+}
+
+.product-form,
+.product-form__inputs input,
+.product-form button{
+    border-radius: 3pt;
+    border: 1pt solid #D97B29;
+}
+.product-form__inputs{            
+    list-style: none;
+    display: block;
+}
+
+.product-form__inputs li,
+.product-form__inputs label,
+.product-form__inputs input{
+    width: auto;
+    padding: 0.2rem;
+    margin: 0.2rem;
+}
+
+.product-form button{
+    font-size: 12pt;
+    cursor: pointer;
+    padding: 0.2rem 1rem;
+    margin: 0.4rem;
+    background: #0C260E;
+    color: #4F8C8C;
+    border: 1pt solid #4F8C8C;
+}
+
+.product-form button:hover,
+.product-form button:active{            
+    background: #164419;
+    color: #7cafaf;
+    border: 1pt solid #7cafaf;
+}

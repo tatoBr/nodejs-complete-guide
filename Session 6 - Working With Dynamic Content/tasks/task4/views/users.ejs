@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <%- include( 'includes/head.ejs', { url: url } ) %> 
+</head>
+<body>
+    <%- include( 'includes/header_nav.ejs', { url: url } ) %> 
+    <main>
+        <% if( users.length > 0 ){ %> 
+        <ul>
+            <% for( let user of users ){ %>
+                <li><%= user.firstname%> <%= user.lastname %> </li>
+            <% } %>
+        </ul>
+        <% } %> 
+    </main>
+</body>
+</html>

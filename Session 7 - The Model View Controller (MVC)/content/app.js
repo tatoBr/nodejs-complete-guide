@@ -43,6 +43,12 @@ app.set( 'views', path.join( rootPath, 'views', 'pug' ));
 // app.set( 'view engine', 'ejs' );
 // app.set( 'views', path.join( rootPath, 'views', 'ejs' ));
 
+//importing Routes
+const productRoutes = require( './routes/products' );
+
+//using the routes
+app.use( productRoutes );
+
 //default route/404
 app.use(( req, res )=>{
     res.status( 404 ).render( '404', {

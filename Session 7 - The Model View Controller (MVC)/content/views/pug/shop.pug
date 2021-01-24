@@ -1,0 +1,18 @@
+extends layouts/main-layout.pug
+block styles
+    link(rel="stylesheet", href="/styles/shop.css")
+block content-main
+    h1 Take a look at our Products:
+    .grid
+        if products.length > 0
+            for product of products
+                article.product__card
+                    header.product__card__header
+                        h1 #{ product.title }
+                    .card__body
+                        img(src="/media/product.jpg", alt="Product Imaeg").product__card__photo
+                        span.product__card__price R$ #{ product.price }
+                        p.product__card__description #{ product.description }
+                        button.product__card__btn add to cart
+        else
+            span No Products    

@@ -26,6 +26,7 @@ body{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: var( --silver-metalic );
     color: var( --xiketic );
+    height: 100%;
 }
 
 .header__nav{
@@ -71,14 +72,16 @@ body{
 }
 .header__nav__listitem a:hover{
     background-color: var( --xirect2 );
-    color: var( --light-grey );
+    color: var( --pink-lavander );
 }
 
-main{
-    z-index: -1;
-    padding: 0.5rem;
-    text-align: center;
-    background-color: var( --light-grey );
+main{   
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem;    
+    background-color: var( --silver-metalic );
     border: 1px solid var( --taupe-grey );
-    color: var( --dark-purple );    
+    color: var( --dark-purple );
 }

@@ -1,0 +1,30 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<%- include( 'includes/head.ejs' ) %> 
+<body>
+    <%- include( 'includes/header.ejs' ) %> 
+    <main>
+        <h1>Product List</h1>
+    </main>
+    <% if( products.length > 0 ) { %> 
+        <div class="grid">
+            <% for( let product of products ) { %>
+                <article class="product__card">
+                    <header class="product__card__header">
+                        <h1> <%= product.title %> </h1>
+                    </header>
+                    <div class="card__body">
+                        <img src="/media/product.jpg" alt="Product Image" class="product__card__photo">
+                        <span class="product__card__price"><%= product.price %> </span>
+                        <p class="product__card__description"><%= product.description %> </p>
+                        <button class="product__card__btn" >add to cart</button>
+                    </div>
+                </article>
+            <% } %>  
+        </div>
+    <% } else { %>  
+        <p>No Products Found.</p>      
+    <% } %> 
+</body>
+</html>

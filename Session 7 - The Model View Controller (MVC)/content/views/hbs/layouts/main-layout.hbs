@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ pageTitle }}</title>
+    <link rel="stylesheet" href="/styles/main.css">
+    {{#if shopPage }}
+    <link rel="stylesheet" href="/styles/shop.css">
+    {{/if}}
+    {{#if addProductPage }}
+    <link rel="stylesheet" href="/styles/product-form.css">
+    {{/if}}
+</head>
+<body>
+    <header>
+            <nav class="header__nav">
+                <ul class="header__nav__list">
+                    <li class="header__nav__listitem"><span>LOGO</span></li>
+                    <li class="header__nav__listitem"><a href="/">Home</a></li>
+                    <li class="header__nav__listitem"><a href="/shop">Shop</a></li>
+                    <li class="header__nav__listitem"><a href="/add-product">Add Products</a></li>
+                </ul>
+            </nav>
+        </header>    
+    {{{ body }}}        
+</body>
+</html>

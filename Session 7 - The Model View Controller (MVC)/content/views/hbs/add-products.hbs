@@ -1,0 +1,13 @@
+<main>
+    <form action="/add-product" method="post" class="product__form">
+        <header class="product__form__header">
+            <h1>Product Registration</h1>
+        </header>
+        <div class="form__body">
+            <div class="form_row"><label for="Title">Title</label><input type="text" id="Title" name="title"></div>
+            <div class="form_row"><label for="Price">Price</label><input type="number" step=".01" id="Price" name="price"></div>
+            <div class="form_row_vertical"><label for="Description">Description</label><textarea name="description" id="Description" cols="30" rows="10"></textarea></div>
+            <div class="form_row"><button type="submit">Save</button></div>
+        </div>
+    </form>
+</main>

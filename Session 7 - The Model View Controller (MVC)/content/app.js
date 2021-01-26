@@ -28,16 +28,16 @@ app.use( express.static( path.join( rootPath, 'public' )));//static folder
 
 //setting up the template engine
 //>>PUG
-app.set( 'view engine', 'pug' );
-app.set( 'views', path.join( rootPath, 'views', 'pug' ));
+// app.set( 'view engine', 'pug' );
+// app.set( 'views', path.join( rootPath, 'views', 'pug' ));
 
 //>>handlebars
-// app.engine( 'hbs', handlebars({
-//     defaultLayout: path.join( rootPath, 'views', 'handlebars', 'layouts', 'main-layout' ),
-//     extname: 'hbs'
-// }));
-// app.set( 'view engine', 'hbs' );
-// app.set( 'views', path.join( rootPath, 'views', 'handlebars' ));
+app.engine( 'hbs', handlebars({
+    defaultLayout: path.join( rootPath, 'views', 'hbs', 'layouts', 'main-layout' ),
+    extname: 'hbs'
+}));
+app.set( 'view engine', 'hbs' );
+app.set( 'views', path.join( rootPath, 'views', 'hbs' ));
 
 //>EJS
 // app.set( 'view engine', 'ejs' );
@@ -52,7 +52,9 @@ app.use( productRoutes );
 //default route/404
 app.use(( req, res )=>{
     res.status( 404 ).render( '404', {
-        pageTitle: 'MyShop - 404 | Page Not Found'
+        pageTitle: 'MyShop - 404 | Page Not Found',
+        url: req.url,
+        page404: true
     });
 });
 

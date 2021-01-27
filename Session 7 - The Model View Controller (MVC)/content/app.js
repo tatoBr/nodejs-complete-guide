@@ -13,7 +13,7 @@ const path = require( 'path' );
 const express = require( 'express' );
 const handlebars = require( 'express-handlebars' );
 
-//Importing Local modules
+//Importing project modules
 const rootPath = require( path.join( __dirname, 'util', 'root_dir' ))
 
 //declaring project global variables
@@ -32,31 +32,26 @@ app.use( express.static( path.join( rootPath, 'public' )));//static folder
 // app.set( 'views', path.join( rootPath, 'views', 'pug' ));
 
 //>>handlebars
-app.engine( 'hbs', handlebars({
-    defaultLayout: path.join( rootPath, 'views', 'hbs', 'layouts', 'main-layout' ),
-    extname: 'hbs'
-}));
-app.set( 'view engine', 'hbs' );
-app.set( 'views', path.join( rootPath, 'views', 'hbs' ));
+// app.engine( 'hbs', handlebars({
+//     defaultLayout: path.join( rootPath, 'views', 'hbs', 'layouts', 'main-layout' ),
+//     extname: 'hbs'
+// }));
+// app.set( 'view engine', 'hbs' );
+// app.set( 'views', path.join( rootPath, 'views', 'hbs' ));
 
 //>EJS
-// app.set( 'view engine', 'ejs' );
-// app.set( 'views', path.join( rootPath, 'views', 'ejs' ));
+app.set( 'view engine', 'ejs' );
+app.set( 'views', path.join( rootPath, 'views', 'ejs' ));
 
 //importing Routes
 const productRoutes = require( './routes/products' );
+const errorRoutes = require( './routes/errors' );
 
 //using the routes
 app.use( productRoutes );
 
 //default route/404
-app.use(( req, res )=>{
-    res.status( 404 ).render( '404', {
-        pageTitle: 'MyShop - 404 | Page Not Found',
-        url: req.url,
-        page404: true
-    });
-});
+app.use( errorRoutes );
 
 //start the server
 app.listen( PORT, console.log( `Server is running and listening for connections on PORT ${ PORT }.` )); 

@@ -1,8 +1,8 @@
 .grid{
-    width: 100%;
+    width: auto;
     display: grid;    
-    grid-template-columns: 1fr 1fr 1fr 1fr; 
-    margin: 2rem;   
+    grid-template-columns: 1fr 1fr 1fr ; 
+    margin: 2rem;
 }
 
 .product__card{
